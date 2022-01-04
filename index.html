@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bip.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e0e4b94a49.js" crossorigin="anonymous"></script>
+    <title>Metrónomo</title>
+  </head>
+  <body>
+    <main>
+      <section class="contenedorMetro">
+        <div>
+            <h1>Metrónomo Online</h1>
+        </div>
+        <div id="contenedorBeat">
+        </div>
+        <div class="contenedorBPM">
+            <p class="textoBPM"><span id="numeroBPM">-</span>BPM</p>
+        </div>
+        <div class="ajusteBPM">
+            <div id="botonRestarBPM" class="bpm">
+                <div class="botonCircular">
+                    <p><i class="fas fa-minus"></i></p>
+                </div>
+                <input id="slider" type="range" min="20" max="260" step="1">
+                </div>
+                <div id="botonSumarBPM" class="botonCircular">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+        <div class="bpm">
+            <div id="botonRestarBeat" class="botonChico">
+                <p><i class="fas fa-minus"></i></p>
+            </div>
+            <div>
+                <div>
+                    <h4>Beat</h4>
+                    <h3 id="numeroBeat">-</h3>
+                </div>
+            </div>
+            <div id="botonSumarBeat" class="botonChico">
+                <i class="fas fa-plus"></i>
+            </div>
+        </div>
+        <div id="botonPlay" class="botonCircular">
+                <i class="fas fa-play"></i>
+        </div>
+        <div class="botonesAvanzados">
+            <div id="botonConfig">
+                <i class="fas fa-search"></i>
+            </div>
+            <div id="botonGuardar">
+                <i class="fas fa-save"></i>
+               </div>
+        </div>
+    </section>
+    </main>
+    <section class="creditos">
+        <a href="https://www.linkedin.com/in/coderman/">Desarrollado por Javier Olivieri</a>
+    </section>
+    <section class="contenedorConfig">
+        <div class="contenedorCerrar">
+            <div id="botonCerrar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="formBusqueda">
+            <form id="buscador">
+                <input type="text" name="Campo-de-busqueda" id="campoBusqueda" placeholder="Ingresá tu búsqueda">
+                <input type="button" value="Buscar" id="botonBuscar">
+            </form>
+        </div>
+        <section class="contenedorResultados">
+        </section>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./bip.js"></script>
+  </body>
+</html>

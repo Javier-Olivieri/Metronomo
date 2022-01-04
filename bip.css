@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+body {
+    background: lightblue;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.contenedorMetro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10vh 10vw;
+    margin: 0 16px;
+    border-radius: 50px;
+    gap: 16px;
+    background: pink;
+    box-shadow:  12px 12px 24px #bebebe,
+                -12px -12px 24px #ffffff;
+}
+
+.creditos {
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bpm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorBPM {
+    border-radius: 10px;
+    background: lightgreen;
+    box-shadow: inset 4px 4px 6px #bebebe,
+            inset -4px -4px 6px #ffffff;
+    padding: 4px;
+    width: 220px;
+}
+
+#contenedorBeat {
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: inset 4px 4px 6px #bebebe,
+            inset -4px -4px 6px #ffffff;
+    padding: 0 4px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.puntoInactivo {
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #5d5d5d, #4e4e4e);
+    box-shadow:  3px 3px 6px #bebebe,
+                -3px -3px 6px #ffffff;
+}
+
+.puntoActivo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #888888, #808080);
+    box-shadow:  3px 3px 6px #bebebe,
+                -3px -3px 6px #ffffff;
+}
+
+.textoBPM {
+    font-size: 25px;
+}
+
+#numeroBPM {
+    font-size: 56px;
+}
+
+.botonCircular {
+    min-width: 56px;
+    min-height: 36px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+    margin: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.botonCircular:hover {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+}
+
+#botonPlay {
+    width: 64px;
+    height: 64px;
+}
+
+.botonesAvanzados {
+    padding-top: 24px;
+    display: flex;
+}
+
+#botonConfig {
+    min-width: 56px;
+    min-height: 36px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+    margin: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+#botonConfig:hover {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+}
+
+ .ajusteBPM {
+    display: flex;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: inset 6px 6px 12px #bebebe,
+            inset -6px -6px 12px #ffffff;
+    height: 12px;
+    width: 100%;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #5d5d5d, #4e4e4e);
+    box-shadow:  3px 3px 6px #bebebe,
+                -3px -3px 6px #ffffff;
+}
+
+.botonChico {
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  8px 8px 16px #bebebe,
+                -8px -8px 16px #ffffff;
+    margin: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.botonChico:hover {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+}
+
+.botonPresionado {
+    min-width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+    margin: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* Estilos de la configuración */
+
+.contenedorConfig {
+    width: 100vw;
+    height: 80vh;
+    border-radius: 36px 36px 0 0;
+    z-index: 999;
+    background: #f1f1f1;
+    padding: 48px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    display: none;
+    overflow: scroll;
+}
+
+#botonGuardar {
+    min-width: 56px;
+    min-height: 36px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+    margin: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+#botonGuardar:hover {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+}
+
+.contenedorCerrar {
+    display: flex;
+    justify-content: end;
+}
+
+#botonCerrar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+    margin: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+#botonCerrar:hover {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+}
+
+.botonesConfig {
+    display: none;
+}
+
+/*Estilos del buscador*/
+
+.contenedorBusqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+#buscador {
+    display: flex;
+    justify-content: center;
+}
+
+.formBusqueda {
+    height: 80px;
+}
+
+#campoBusqueda {
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: inset 4px 4px 6px #bebebe,
+            inset -4px -4px 6px #ffffff;
+    padding: 12px;
+    width: 220px;
+    border: none;
+}
+
+#botonBuscar {
+    min-width: 100px;
+    min-height: 36px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+    margin: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: none;
+}
+
+#botonBuscar:hover {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+             -8px -8px 16px #ffffff;
+}
+
+.contenedorResultados {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.cardResultado {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 24px;
+    background: #e0e0e0;
+    box-shadow:  6px 6px 12px #bebebe,
+                -6px -6px 12px #ffffff;
+}
+
+.bpmCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px
+}
+
+.bpmCard .botonCircular {
+    margin: 0px;
+}
+
+.cover {
+    max-width: 90px;
+    max-height: 90px;
+    border-radius: 20px;
+}
+
+.bpmCancion {
+    font-size: 32px;
+    display: inline;
+}
+
+.textoBPMCard {
+    font-size: 16px;
+}
+
+/* Dark Mode */
+
+.darkMode {
+    background: #2b2b2b;
+}
+
+.darkMode .contenedorMetro {
+    border-radius: 50px;
+    background: #2b2b2b;
+    box-shadow:  7px 7px 14px #252525,
+                 -7px -7px 14px #313131;
+}
